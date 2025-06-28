@@ -7,9 +7,12 @@
   --gray: #161616;
   --text-gray: oklch(0.708 0 0);
   --text-white: #ecfafa;
+  
 }
 
 
 body {
   background-color: var(--black);
+  font-family: "Geist", sans-serif;
+  color: var(--text-white);
 }

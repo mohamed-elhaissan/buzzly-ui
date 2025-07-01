@@ -13,15 +13,30 @@ const Home = () => {
           Buzzly
         </Link>
       </div>
-      <div className="flex   items-center  w-1/8">
-        <Link to={"github"} className="flex-1  hover:bg-[#171717]  p-2">
-          <img src={githubSvg} alt="" className="h-10   rounded-full" />
+      <div className="flex gap-1  items-center w-1/7">
+        <Link
+          to={"github"}
+          className="flex-1  hover:bg-[var(--hovered-item)] rounded  p-2"
+        >
+          <img
+            src={githubSvg}
+            alt=""
+            className="h-6 w-6 mx-auto rounded-lg cursor-pointer"
+          />
         </Link>
-        <button className="flex-1  hover:bg-[#171717]  p-2">
-          <img src={containerSVG} alt="" className="h-10 w-10 hover:bg-[#171717] p-2 rounded-full" />
+        <button className="flex-1  hover:bg-[var(--hovered-item)] rounded  p-2">
+          <img
+            src={containerSVG}
+            alt=""
+            className="h-6 w-6 mx-auto rounded-lg cursor-pointer"
+          />
         </button>
-        <button className="flex-1  hover:bg-[#171717]  p-2">
-          <img src={darkModeActiverSvg} alt="" className="h-10 w-10 hover:bg-[#171717] p-2 rounded-full" />
+        <button className="flex-1  hover:bg-[var(--hovered-item)] rounded  p-2">
+          <img
+            src={darkModeActiverSvg}
+            alt=""
+            className="h-6 w-6 mx-auto rounded-lg cursor-pointer"
+          />
         </button>
       </div>
     </header>

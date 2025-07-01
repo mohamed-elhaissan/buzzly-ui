@@ -7,7 +7,7 @@
   --gray: #161616;
   --text-gray: oklch(0.708 0 0);
   --text-white: #ecfafa;
-  
+  --hovered-item : oklch(.371 0 0);
 }
 
 

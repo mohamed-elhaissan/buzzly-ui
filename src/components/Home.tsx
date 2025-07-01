@@ -6,20 +6,22 @@ const Home = () => {
   return (
     <header className="flex w-full font-medium  justify-between container mx-auto p-4">
       <div>
-        <Link to={"/docs"} className="inline-flex items-center justify-center   h-8 rounded-md gap-1.5 px-3 transition-all hover:bg-[var(--)]">Docs</Link>
-      </div>
-      <div className="flex ">
-        <button>Search Docs</button>
-        <div />
-        <Link to={"github"}>
-          <img src={githubSvg} alt="" className="w-7 h-7"/>
-          10.8k
+        <Link
+          to={"/docs"}
+          className="inline-flex items-center justify-center text-2xl font-extrabold   h-8 rounded-md gap-1.5 px-3 transition-all hover:bg-[var(--)]"
+        >
+          Buzzly
         </Link>
-        <button>
-          <img src={containerSVG} alt="" />
+      </div>
+      <div className="flex   items-center  w-1/8">
+        <Link to={"github"} className="flex-1  hover:bg-[#171717]  p-2">
+          <img src={githubSvg} alt="" className="h-10   rounded-full" />
+        </Link>
+        <button className="flex-1  hover:bg-[#171717]  p-2">
+          <img src={containerSVG} alt="" className="h-10 w-10 hover:bg-[#171717] p-2 rounded-full" />
         </button>
-        <button>
-          <img src={darkModeActiverSvg} alt="" />
+        <button className="flex-1  hover:bg-[#171717]  p-2">
+          <img src={darkModeActiverSvg} alt="" className="h-10 w-10 hover:bg-[#171717] p-2 rounded-full" />
         </button>
       </div>
     </header>

@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import githubSvg from "../assets/github.svg";
 import darkModeActiverSvg from "../assets/darkmodeactiver.svg";
 import containerSVG from "../assets/container.svg";
-const Home = () => {
+
+const Header = () => {
   return (
     <header className="flex w-full font-medium  justify-between container mx-auto p-4">
       <div>
@@ -16,7 +17,7 @@ const Home = () => {
       <div className="flex gap-1  items-center w-1/7">
         <Link
           to={"github"}
-          className="flex-1  hover:bg-[var(--hovered-item)] rounded  p-2"
+          className="flex-1  hover:bg-[var(--hovered-item)]  rounded  p-2"
         >
           <img
             src={githubSvg}
@@ -43,4 +44,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Header;

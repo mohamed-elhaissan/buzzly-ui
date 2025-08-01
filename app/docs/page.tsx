@@ -45,7 +45,10 @@ export default function Page() {
         </p>
       </div>
       <div className="text-end  w-1/2 mx-auto ">
-        <Link href={"/installation"} className="flex text-blue-600 items-center justify-end  ">
+        <Link
+          href={"/docs/installation"}
+          className="flex text-blue-600 items-center justify-end  "
+        >
           Installation{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"

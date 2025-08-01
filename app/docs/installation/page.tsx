@@ -1,17 +1,22 @@
 "use client";
 import useCopyToClipBoard from "@/app/hooks/useCopyToClipboard";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 import Link from "next/link";
 export default function Page() {
   const { isCopied, copyToClipboard } =
     useCopyToClipBoard("npm install buzzly");
   return (
-    <div className="p-4 mt-20 ">
+    <motion.div
+      variants={itemVariants}
+      initial="closed"
+      animate="open"
+      className="p-4 mt-20 "
+    >
       <div>
-        <h2 className="font-semibold  mb-2 text-blue-600 ">Installation</h2>
-        <p>
+        <h2 className="font-semibold  mb-2  ">Installation</h2>
+        <p className="text-gray-400">
           The quickest way to Install Buzzly Notification is using
-          <span className="text-blue-600"> npm install Buzzly</span>
+          <span className="text-white"> npm install Buzzly</span>
         </p>
         <div
           className="flex  gap-2 text-sm items-center justify-between mt-5 w-1/3 px-4 py-2 bg-[#000000] "
@@ -75,7 +80,10 @@ export default function Page() {
           }}
           className="bg-black/[.05] flex w-1/3 items-center justify-between gap-5 text-sm   dark:bg-white/[.06] font-mono  px-4 py-3 "
         >
-          npm install buzzly
+          <code>
+            <span className="text-purple-500">npm</span>{" "}
+            <span className="text-green-500">install buzzly</span>
+          </code>
           <button disabled={isCopied} onClick={copyToClipboard}></button>
         </code>
       </div>
@@ -86,7 +94,7 @@ export default function Page() {
         className="w-1/3 mt-10 mb-4 sm:w-[80%] xl:w-1/2 2xl:w-1/2"
       >
         <div className="py-10">
-          <h2 className="font-semibold  mb-2 text-blue-600 ">Usage</h2>
+          <h2 className="font-semibold  mb-2 ">Usage</h2>
 
           <p className="dark:text-[#c1c1c6]">
             Render the toaster in the root of your app.
@@ -147,37 +155,37 @@ export default function Page() {
               </motion.svg>
             )}
           </div>
-          <div className="bg-[#FCFCFC] border dark:bg-[#171716] dark:border-[#2e2e2d] dark:text-white   border-[#e4e4e7] flex justify-between items-center p-2 px-5 rounded">
+          <div className="bg-[#FCFCFC] border dark:bg-[#0a0a0a] dark:border-[#2e2e2d] dark:text-white   border-[#e4e4e7] flex justify-between items-center p-2 px-5 rounded">
             <div className="text-sm">
               <p className="codeBlock">
-                <span className="text-[#00BBFF] font-semibold codeBlock">
+                <span className="text-pink-600 font-semibold codeBlock">
                   import
                 </span>{" "}
                 {"      { Toaster, toast }    "}
-                <span className="text-[#00BBFF] font-semibold codeBlock">
+                <span className="text-pink-500 font-semibold codeBlock">
                   from
                 </span>{" "}
-                <span className="text-[#bb88ff]">{"   'buzzly'  "}</span>
+                <span className="text-green-500">{"   'buzzly'  "}</span>
               </p>
               <p className="my-3">{"// ..."}</p>
               <p className="my-3 codeBlock ">
-                <span className="text-[#C792EA] font-semibold">function</span>
-                {" App() {"}
+                <span className="text-[#eb5b89] font-semibold">function</span>
+                <span className="text-purple-500">{" App() {"}</span>
               </p>
               <pre>
                 <code className=" codeBlock">
                   {"  "}
-                  <span className="text-[#89DDFF] font-semibold ">
+                  <span className="text-[#eb5b89] font-semibold ">
                     return
                   </span>{" "}
                   ({"\n"}
                   {"    <"}
-                  <span className="text-[#FFCB6B]">div</span>
+                  <span className="text-green-500">div</span>
                   {">\n"}
                   {"      <"}
-                  <span className="text-[#FFCB6B]">Toaster</span> {"/> \n"}
+                  <span className="text-green-500">Toaster</span> {"/> \n"}
                   {"      <"}
-                  <span className="text-[#FFCB6B]">button</span>{" "}
+                  <span className="text-green-500">button</span>{" "}
                   <span className="text-[#C792EA]">onClick</span>
                   {"={() => "}
                   <span className="text-[#82AAFF]">toast.</span>
@@ -188,10 +196,10 @@ export default function Page() {
                   {"\n"}
                   {"          "}Give me a Toast{"\n"}
                   {"      </"}
-                  <span className="text-[#FFCB6B]">button</span>
+                  <span className="text-green-500">button</span>
                   {">\n"}
                   {"    </"}
-                  <span className="text-[#FFCB6B]">div</span>
+                  <span className="text-green-500">div</span>
                   {">\n"}
                   {"  "});{"\n"}
                   {"}"}
@@ -231,7 +239,7 @@ export default function Page() {
           href={"/docs/types"}
           className="flex text-blue-600 items-center justify-end  "
         >
-          Types{" "}
+          Configuration{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -248,6 +256,25 @@ export default function Page() {
           </svg>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }
+
+const itemVariants = {
+  open: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      y: { stiffness: 1000, velocity: -100 },
+      ease: easeInOut,
+    },
+  },
+  closed: {
+    y: 20,
+    opacity: 0,
+    transition: {
+      y: { stiffness: 1000 },
+      ease: easeInOut,
+    },
+  },
+};

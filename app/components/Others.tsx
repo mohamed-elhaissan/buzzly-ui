@@ -17,28 +17,45 @@ const Others = () => {
   return (
     <section className="w-1/3  sm:w-[80%] xl:w-1/2 2xl:w-1/3">
       <div>
-        <h1 className="text-2xl font-bold text-blue-600">Others</h1>
-        <p className="text-gray-500">
+        <motion.h1
+          variants={itemVariants}
+          initial="closed"
+          animate="open"
+          className="text-2xl font-bold text-blue-600"
+        >
+          Others
+        </motion.h1>
+        <motion.p
+          variants={itemVariants}
+          initial="closed"
+          animate="open"
+          className="text-gray-500"
+        >
           You can use more options to customize the toast.
-        </p>
+        </motion.p>
 
-        <div className="mt-4   flex items-center gap-3  flex-wrap w-full">
+        <motion.div className="mt-4   flex items-center gap-3  flex-wrap w-full">
           {allTypes.map((item, index) => (
-            <div key={index}>
+            <motion.div
+              variants={itemVariants}
+              initial="closed"
+              animate="open"
+              key={index}
+            >
               <button
                 onClick={() => {
                   setIsCLickedButton(index);
                   setIsActivatedButton(item);
                 }}
                 style={{
-                  background: isCLickedButton === index ? "#8CEECA" : "#1D1D1D",
+                  background: isCLickedButton === index ? "#ffffff" : "#1D1D1D",
                   color: isCLickedButton === index ? "black" : "#fff",
                 }}
                 className="codeText text-sm    hover:bg-[#F3F3F3] transition duration-75 ease-in p-2 px-4 rounded cursor-pointer "
               >
                 {item.name}
               </button>
-            </div>
+            </motion.div>
           ))}
           {
             <motion.div
@@ -84,7 +101,7 @@ const Others = () => {
               )}
             </motion.div>
           }
-        </div>
+        </motion.div>
       </div>
     </section>
   );

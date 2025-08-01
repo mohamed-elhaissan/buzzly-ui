@@ -1,8 +1,15 @@
-import Link from "next/link";
+'use client'
 
+
+import Link from "next/link";
+import {easeInOut, motion} from "framer-motion"
 export default function Page() {
   return (
-    <div className="p-4 flex flex-col justify-evenly h-full  gap-5  ">
+    <motion.div
+    variants={itemVariants}
+    initial="closed"
+    animate="open"
+    className="p-4 flex flex-col justify-evenly h-full  gap-5  ">
       <div
         className="p-4"
         style={{
@@ -66,6 +73,24 @@ export default function Page() {
           </svg>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }
+const itemVariants = {
+  open: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      y: { stiffness: 1000, velocity: -100 },
+      ease: easeInOut,
+    },
+  },
+  closed: {
+    y: 20,
+    opacity: 0,
+    transition: {
+      y: { stiffness: 1000 },
+      ease: easeInOut,
+    },
+  },
+};

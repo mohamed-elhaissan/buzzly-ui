@@ -18,29 +18,46 @@ const Types = () => {
   return (
     <section className="w-1/3 mb-4 sm:w-[80%] xl:w-1/2 2xl:w-1/3">
       <div>
-      <h1 className="text-2xl font-bold text-blue-600">Types</h1>
-      <p className="text-gray-500">
-        Types are used to define the type of the data that is being passed to
-        the component.
-      </p>
+        <motion.h1
+          variants={itemVariants}
+          initial="closed"
+          animate="open"
+          className="text-2xl font-bold text-blue-600"
+        >
+          Types
+        </motion.h1>
+        <motion.p
+          variants={itemVariants}
+          initial="closed"
+          animate="open"
+          className="text-gray-500"
+        >
+          Types are used to define the type of the data that is being passed to
+          the component.
+        </motion.p>
 
         <div className="mt-4   flex items-center gap-3  flex-wrap w-full">
           {allTypes.map((type, index) => (
-            <div key={index}>
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              initial="closed"
+              animate="open"
+            >
               <button
                 onClick={() => {
                   setIsCLickedButton(index);
                   setIsActivatedButton(type);
                 }}
                 style={{
-                  background: isCLickedButton === index ? "#8CEECA" : "#1D1D1D",
+                  background: isCLickedButton === index ? "#ffffff" : "#1D1D1D",
                   color: isCLickedButton === index ? "black" : "#fff",
                 }}
                 className="codeText text-sm    text-white  hover:opacity-50 transition duration-75 ease-in p-2 px-4 rounded cursor-pointer  "
               >
                 {type.name}
               </button>
-            </div>
+            </motion.div>
           ))}
           {
             <motion.div

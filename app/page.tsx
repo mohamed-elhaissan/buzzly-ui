@@ -6,7 +6,7 @@ export default function Home() {
   const { isCopied, copyToClipboard } =
     useCopyToClipBoard("npm install buzzly");
   return (
-    <div className=" flex items-center tracking-[-.01em] flex-col justify-center  min-h-screen  sm:p-20">
+    <div className="  flex items-center tracking-[-.01em] flex-col justify-center  min-h-screen  sm:p-20">
       <h1 className="font-mono font-semibold  text-9xl">Buzzly</h1>
 
       <code className="bg-black/[.05] flex items-center justify-center gap-5  mt-5 dark:bg-white/[.06] font-mono font-semibold px-2 py-0.5 rounded">

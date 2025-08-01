@@ -9,14 +9,31 @@ export default function Position() {
   return (
     <section className="w-1/3 mb-4 sm:w-[80%] xl:w-1/2 2xl:w-1/3">
       <div>
-        <h1 className="text-2xl font-bold text-blue-600">Positions</h1>
-        <p className="text-gray-500">
+        <motion.h1
+          variants={itemVariants}
+          initial="closed"
+          animate="open"
+          className="text-2xl font-bold text-blue-600"
+        >
+          Positions
+        </motion.h1>
+        <motion.p
+          variants={itemVariants}
+          initial="closed"
+          animate="open"
+          className="text-gray-500"
+        >
           Swipe direction changes depending on the position.
-        </p>
+        </motion.p>
 
         <div className="mt-4   flex items-center  gap-x-3 gap-y-2 flex-wrap w-full">
           {positions.map((position: string, index: number) => (
-            <div key={index}>
+            <motion.div
+              variants={itemVariants}
+              initial="closed"
+              animate="open"
+              key={index}
+            >
               <button
                 style={{
                   background: isCLickedButton === index ? "#8CEECA" : "#1D1D1D",
@@ -30,7 +47,7 @@ export default function Position() {
               >
                 {position}
               </button>
-            </div>
+            </motion.div>
           ))}
           {
             <motion.div

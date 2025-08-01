@@ -1,12 +1,14 @@
 "use client";
 import useCopyToClipBoard from "@/app/hooks/useCopyToClipboard";
 import { motion } from "framer-motion";
+import Link from "next/link";
 export default function Page() {
-  const { isCopied, copyToClipboard } =  useCopyToClipBoard("npm install buzzly");
+  const { isCopied, copyToClipboard } =
+    useCopyToClipBoard("npm install buzzly");
   return (
     <div className="p-4 mt-20 ">
       <div>
-        <h2 className="font-semibold  mb-2 text-white">Installation</h2>
+        <h2 className="font-semibold  mb-2 text-blue-600 ">Installation</h2>
         <p>
           The quickest way to Install Buzzly Notification is using
           <span className="text-blue-600"> npm install Buzzly</span>
@@ -77,11 +79,14 @@ export default function Page() {
           <button disabled={isCopied} onClick={copyToClipboard}></button>
         </code>
       </div>
-      <div className="w-1/3 mb-4 sm:w-[80%] xl:w-1/2 2xl:w-1/2">
-        <div>
-          <h2 className="  my-10 text-2xl font-medium dark:text-white">
-            Usage
-          </h2>
+      <div
+        style={{
+          borderTop: "1px solid var(--borderColor)",
+        }}
+        className="w-1/3 mt-10 mb-4 sm:w-[80%] xl:w-1/2 2xl:w-1/2"
+      >
+        <div className="py-10">
+          <h2 className="font-semibold  mb-2 text-blue-600 ">Usage</h2>
 
           <p className="dark:text-[#c1c1c6]">
             Render the toaster in the root of your app.
@@ -195,6 +200,53 @@ export default function Page() {
             </div>
           </div>
         </div>
+      </div>
+      <div
+        style={{
+          borderTop: "1px solid var(--borderColor)",
+        }}
+        className="text-end   mx-auto flex justify-around py-5 "
+      >
+        <Link
+          href={"/docs/installation"}
+          className="flex text-blue-600 items-center justify-end  "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-6 rotate-180"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m8.25 4.5 7.5 7.5-7.5 7.5"
+            />
+          </svg>
+          Installation{" "}
+        </Link>
+        <Link
+          href={"/docs/types"}
+          className="flex text-blue-600 items-center justify-end  "
+        >
+          Types{" "}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m8.25 4.5 7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </Link>
       </div>
     </div>
   );

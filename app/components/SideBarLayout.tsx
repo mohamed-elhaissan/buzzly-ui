@@ -1,5 +1,5 @@
 "use client";
-import { AnimatePresence, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -35,7 +35,7 @@ export default function SideBarLayout() {
     >
       <div>
         <Link href={"/"} className="font-semibold text-2xl tracking-[-.01em] ">
-          Buzzly<sub className="text-blue-600">docs</sub>
+          Buzzly<sub className="text-[#87CEEB]">docs</sub>
         </Link>
         <div className="md:flex hidden flex-col gap-3 mt-10">
           {menuItems.map((item, index) => {
@@ -44,7 +44,7 @@ export default function SideBarLayout() {
               <Link
                 key={index}
                 href={item.href}
-                className={`${isActive && "text-blue-500 "}  rounded-lg `}
+                className={`${isActive && "text-[#87CEEB] "}  rounded-lg `}
               >
                 {item.label}
               </Link>

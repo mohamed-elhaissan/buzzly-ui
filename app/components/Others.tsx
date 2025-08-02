@@ -21,7 +21,7 @@ const Others = () => {
           variants={itemVariants}
           initial="closed"
           animate="open"
-          className="text-2xl font-bold text-blue-600"
+          className="text-2xl font-bold text-[#87CEEB]"
         >
           Others
         </motion.h1>

@@ -2,7 +2,7 @@
 import FooterLinks from "@/app/components/FooterLinks";
 import useCopyToClipBoard from "@/app/hooks/useCopyToClipboard";
 import { easeInOut, motion } from "framer-motion";
-import Link from "next/link";
+
 export default function Page() {
   const { isCopied, copyToClipboard } =
     useCopyToClipBoard("npm install buzzly");

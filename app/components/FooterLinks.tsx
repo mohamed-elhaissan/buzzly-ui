@@ -22,7 +22,7 @@ export default function FooterLinks({
     >
       <Link
         href={prevPageHref}
-        className="flex text-blue-600 items-center justify-end  "
+        className="flex text-[#87CEEB] items-center justify-end  "
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@ export default function FooterLinks({
       </Link>
       <Link
         href={nextPageHref}
-        className="flex text-blue-600 items-center justify-end  "
+        className="flex text-[#87CEEB] items-center justify-end  "
       >
         {nextPageText}
         <svg

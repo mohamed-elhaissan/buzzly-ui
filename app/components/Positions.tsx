@@ -13,7 +13,7 @@ export default function Position() {
           variants={itemVariants}
           initial="closed"
           animate="open"
-          className="text-2xl font-bold text-blue-600"
+          className="text-2xl font-bold text-[#87CEEB]"
         >
           Positions
         </motion.h1>

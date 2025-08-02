@@ -17,7 +17,7 @@ export default function Page() {
         <h2 className="font-semibold  mb-2  ">Installation</h2>
         <p className="text-gray-400 text-xs text-wrap  ">
           The quickest way to Install Buzzly Notification is using
-          <span className="text-white"> npm install Buzzly</span>
+          <span className="text-white"> npm i buzzly</span>
         </p>
         <div
           className="flex  gap-2 text-sm items-center justify-between mt-5  lg:w-1/3 px-4 py-2 bg-[#000000] "
@@ -85,7 +85,6 @@ export default function Page() {
             <span className="text-purple-500">npm</span>{" "}
             <span className="text-green-500">install buzzly</span>
           </code>
-          <button disabled={isCopied} onClick={copyToClipboard}></button>
         </code>
       </div>
       <div

@@ -22,7 +22,7 @@ export default function SideBarLayout() {
       label: "Configuration ",
     },
     {
-      href: "github.com/mohamed-elhaissan",
+      href: "https://github.com/mohamed-elhaissan/Buzzly",
       label: "Github",
     },
   ];
@@ -52,49 +52,7 @@ export default function SideBarLayout() {
           })}
         </div>
       </div>
-      <Link
-        href={"https://github.com/mohamed-elhaissan/Buzzly"}
-        className="w-full"
-      >
-        <motion.div
-          onHoverStart={() => setHovered(true)}
-          onHoverEnd={() => setHovered(false)}
-          className="bg-white cursor-pointer mb-20 hidden md:block text-black w-full py-1 px-5 text-center rounded-md"
-        >
-          <AnimatePresence>
-            {isHovered ? (
-              <motion.svg
-                initial={{
-                  opacity: 0,
-                  y: 10,
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                exit={{
-                  opacity: 0,
-                  y: -10,
-                }}
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="size-6 mx-auto"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-                />
-              </motion.svg>
-            ) : (
-              <span>Github</span>
-            )}
-          </AnimatePresence>
-        </motion.div>
-      </Link>
+
       <button
         onClick={() => setIsOpened(!isOpened)}
         className="cursor-pointer md:hidden hover:text-blue-500 text-xl"

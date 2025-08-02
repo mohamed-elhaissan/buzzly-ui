@@ -10,7 +10,7 @@ export default function Home() {
       <h1 className="font-mono font-semibold text-8xl  md:text-9xl">Buzzly</h1>
 
       <code className="bg-black/[.05] flex items-center justify-center gap-5  mt-5 dark:bg-white/[.06] font-mono font-semibold px-2 py-0.5 rounded">
-        npm install buzzly
+        npm i buzzly
         <button disabled={isCopied} onClick={copyToClipboard}>
           {isCopied ? (
             <svg

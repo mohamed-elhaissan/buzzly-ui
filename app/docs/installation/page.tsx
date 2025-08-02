@@ -10,16 +10,16 @@ export default function Page() {
       variants={itemVariants}
       initial="closed"
       animate="open"
-      className="p-4 mt-20 "
+      className="md:p-4 mt-20 "
     >
-      <div>
+      <div className=" w-full">
         <h2 className="font-semibold  mb-2  ">Installation</h2>
-        <p className="text-gray-400">
+        <p className="text-gray-400 text-xs text-wrap  ">
           The quickest way to Install Buzzly Notification is using
           <span className="text-white"> npm install Buzzly</span>
         </p>
         <div
-          className="flex  gap-2 text-sm items-center justify-between mt-5 w-1/3 px-4 py-2 bg-[#000000] "
+          className="flex  gap-2 text-sm items-center justify-between mt-5  md:w-1/3 px-4 py-2 bg-[#000000] "
           style={{
             border: "1px solid var(--borderColor)",
           }}
@@ -233,7 +233,7 @@ export default function Page() {
               d="m8.25 4.5 7.5 7.5-7.5 7.5"
             />
           </svg>
-          Installation{" "}
+          Introduction{" "}
         </Link>
         <Link
           href={"/docs/types"}

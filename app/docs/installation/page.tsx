@@ -1,4 +1,5 @@
 "use client";
+import FooterLinks from "@/app/components/FooterLinks";
 import useCopyToClipBoard from "@/app/hooks/useCopyToClipboard";
 import { easeInOut, motion } from "framer-motion";
 import Link from "next/link";
@@ -209,53 +210,12 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div
-        style={{
-          borderTop: "1px solid var(--borderColor)",
-        }}
-        className="text-end   mx-auto flex justify-around py-5 "
-      >
-        <Link
-          href={"/docs/installation"}
-          className="flex text-blue-600 items-center justify-end  "
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="size-6 rotate-180"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="m8.25 4.5 7.5 7.5-7.5 7.5"
-            />
-          </svg>
-          Introduction{" "}
-        </Link>
-        <Link
-          href={"/docs/configuration"}
-          className="flex text-blue-600 items-center justify-end  "
-        >
-          Configuration{" "}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="size-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="m8.25 4.5 7.5 7.5-7.5 7.5"
-            />
-          </svg>
-        </Link>
-      </div>
+      <FooterLinks
+        prevPageHref="/docs"
+        prevPageText="Introduction"
+        nextPageHref="/docs/configuration"
+        nextPageText="Configuration"
+      />
     </motion.div>
   );
 }

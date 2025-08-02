@@ -1,15 +1,15 @@
-'use client'
-
+"use client";
 
 import Link from "next/link";
-import {easeInOut, motion} from "framer-motion"
+import { easeInOut, motion } from "framer-motion";
 export default function Page() {
   return (
     <motion.div
-    variants={itemVariants}
-    initial="closed"
-    animate="open"
-    className="p-4 flex flex-col justify-evenly h-full  gap-5  ">
+      variants={itemVariants}
+      initial="closed"
+      animate="open"
+      className="p-4 flex flex-col justify-evenly h-full  gap-5  "
+    >
       <div
         className="p-4"
         style={{

@@ -1,6 +1,7 @@
 import Others from "@/app/components/Others";
 import Types from "@/app/components/Types";
 import Positions from "@/app/components/Positions";
+import FooterLinks from "@/app/components/FooterLinks";
 
 export default function Page() {
   return (
@@ -8,6 +9,12 @@ export default function Page() {
       <Types />
       <Positions />
       <Others />
+      <FooterLinks
+        prevPageHref="/docs"
+        prevPageText="Introduction"
+        nextPageHref="/docs/installation"
+        nextPageText=""
+      />
     </div>
   );
 }

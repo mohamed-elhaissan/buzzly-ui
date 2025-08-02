@@ -15,7 +15,7 @@ const Others = () => {
   const [isCLickedButton, setIsCLickedButton] = useState<number>(0);
 
   return (
-    <section className="w-1/3  sm:w-[80%] xl:w-1/2 2xl:w-1/3">
+    <section className="md:w-1/3  sm:w-[80%] xl:w-1/2 2xl:w-1/3">
       <div>
         <motion.h1
           variants={itemVariants}

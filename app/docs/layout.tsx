@@ -11,7 +11,7 @@ import SideBarLayout from "../components/SideBarLayout";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <div className="flex h-screen font-mono tracking-[-.01em] ">
+    <div className="flex flex-col md:flex-row h-screen font-mono tracking-[-.01em] ">
       <SideBarLayout />
 
       <main className="md:flex-1 w-full overflow-x-hidden h-screen p-4 ">

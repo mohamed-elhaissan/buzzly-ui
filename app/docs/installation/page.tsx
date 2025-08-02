@@ -20,7 +20,7 @@ export default function Page() {
           <span className="text-white"> npm install Buzzly</span>
         </p>
         <div
-          className="flex  gap-2 text-sm items-center justify-between mt-5  md:w-1/3 px-4 py-2 bg-[#000000] "
+          className="flex  gap-2 text-sm items-center justify-between mt-5  lg:w-1/3 px-4 py-2 bg-[#000000] "
           style={{
             border: "1px solid var(--borderColor)",
           }}
@@ -79,7 +79,7 @@ export default function Page() {
           style={{
             border: "1px solid var(--borderColor)",
           }}
-          className="bg-black/[.05] flex md:w-1/3 items-center justify-between gap-5 text-sm   dark:bg-white/[.06] font-mono  px-4 py-3 "
+          className="bg-black/[.05] flex lg:w-1/3 items-center justify-between gap-5 text-sm   dark:bg-white/[.06] font-mono  px-4 py-3 "
         >
           <code>
             <span className="text-purple-500">npm</span>{" "}
@@ -92,7 +92,7 @@ export default function Page() {
         style={{
           borderTop: "1px solid var(--borderColor)",
         }}
-        className="md:w-1/3 mt-10 mb-4 sm:w-[80%] xl:w-1/2 2xl:w-1/2"
+        className=" mt-10 mb-4  xl:w-1/2 2xl:w-1/3"
       >
         <div className="py-10">
           <h2 className="font-semibold  mb-2 ">Usage</h2>

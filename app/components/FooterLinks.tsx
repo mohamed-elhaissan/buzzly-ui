@@ -18,7 +18,7 @@ export default function FooterLinks({
       style={{
         borderTop: "1px solid var(--borderColor)",
       }}
-      className="text-end   mx-auto flex justify-around py-5 "
+      className="text-end hidden    mx-auto md:flex justify-around py-5 "
     >
       <Link
         href={prevPageHref}

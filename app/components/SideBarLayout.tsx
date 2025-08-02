@@ -6,6 +6,7 @@ import { useState } from "react";
 
 export default function SideBarLayout() {
   const [isHovered, setHovered] = useState<boolean>(false);
+  const [isOpened, setIsOpened] = useState<boolean>(false);
   const pathName = usePathname();
   const menuItems = [
     {
@@ -20,10 +21,14 @@ export default function SideBarLayout() {
       href: "/docs/configuration",
       label: "Configuration ",
     },
+    {
+      href: "github.com/mohamed-elhaissan",
+      label: "Github",
+    },
   ];
   return (
     <div
-      className="w-64 hidden md:flex  p-4 flex-col justify-between items-start"
+      className="md:w-1/5 2xl:w-64 flex  p-4 md:flex-col justify-between items-start"
       style={{
         borderRight: "1px solid var(--borderColor)",
       }}
@@ -32,7 +37,7 @@ export default function SideBarLayout() {
         <Link href={"/"} className="font-semibold text-2xl tracking-[-.01em] ">
           Buzzly<sub className="text-blue-600">docs</sub>
         </Link>
-        <div className="flex flex-col gap-3 mt-10">
+        <div className="md:flex hidden flex-col gap-3 mt-10">
           {menuItems.map((item, index) => {
             const isActive = pathName === item.href;
             return (
@@ -54,7 +59,7 @@ export default function SideBarLayout() {
         <motion.div
           onHoverStart={() => setHovered(true)}
           onHoverEnd={() => setHovered(false)}
-          className="bg-white cursor-pointer mb-20 text-black w-full py-1 px-5 text-center rounded-md"
+          className="bg-white cursor-pointer mb-20 hidden md:block text-black w-full py-1 px-5 text-center rounded-md"
         >
           <AnimatePresence>
             {isHovered ? (
@@ -90,6 +95,39 @@ export default function SideBarLayout() {
           </AnimatePresence>
         </motion.div>
       </Link>
+      <button
+        onClick={() => setIsOpened(!isOpened)}
+        className="cursor-pointer md:hidden hover:text-blue-500 text-xl"
+      >
+        Menu
+      </button>
+      {isOpened && (
+        <motion.div
+          initial={{
+            y: "-100%",
+            opacity: 0,
+          }}
+          animate={{
+            y: 0,
+            opacity: 1,
+          }}
+          className="flex h-screen fixed left-0 top-0 bg-black w-full items-center justify-center flex-col gap-3 mt-10"
+        >
+          {menuItems.map((item, index) => {
+            const isActive = pathName === item.href;
+            return (
+              <Link
+                onClick={() => setIsOpened(false)}
+                key={index}
+                href={item.href}
+                className={`${isActive && "text-blue-500 "}  rounded-lg `}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
+        </motion.div>
+      )}
     </div>
   );
 }

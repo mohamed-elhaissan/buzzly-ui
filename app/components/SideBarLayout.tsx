@@ -1,5 +1,5 @@
 "use client";
-import {  motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -28,13 +28,13 @@ export default function SideBarLayout() {
   ];
   return (
     <div
-      className="md:w-1/5 2xl:w-64 flex  p-4 md:flex-col justify-between items-start"
+      className="md:w-1/5 2xl:w-64 flex  p-4  md:flex-col justify-between items-start"
       style={{
         borderRight: "1px solid var(--borderColor)",
       }}
     >
       <div>
-        <Link href={"/"} className="font-semibold text-2xl tracking-[-.01em] ">
+        <Link href={"/"} className="font-semibold text-2xl tracking-[-.01em] relative z-50 ">
           Buzzly<sub className="text-[#87CEEB]">docs</sub>
         </Link>
         <div className="md:flex hidden flex-col gap-3 mt-10">
@@ -55,7 +55,7 @@ export default function SideBarLayout() {
 
       <button
         onClick={() => setIsOpened(!isOpened)}
-        className="cursor-pointer md:hidden hover:text-blue-500 text-xl"
+        className="cursor-pointer relative z-50 md:hidden hover:text-blue-500 text-xl"
       >
         Menu
       </button>
@@ -69,7 +69,7 @@ export default function SideBarLayout() {
             y: 0,
             opacity: 1,
           }}
-          className="flex h-screen fixed left-0 top-0 bg-black w-full items-center justify-center flex-col gap-3 mt-10"
+          className="flex h-screen absolute  left-0 top-0 bg-black w-full items-center justify-center flex-col gap-3 "
         >
           {menuItems.map((item, index) => {
             const isActive = pathName === item.href;

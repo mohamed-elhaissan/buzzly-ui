@@ -1,12 +1,15 @@
 "use client";
-import { motion, scale } from "framer-motion";
+import { motion } from "framer-motion";
 import useCopyToClipBoard from "./hooks/useCopyToClipboard";
 import Link from "next/link";
+import { toast, Toaster } from "buzzly";
+import Page from "./components/Installation";
 export default function Home() {
   const { isCopied, copyToClipboard } =
     useCopyToClipBoard("npm install buzzly");
   return (
     <div className="  flex items-center tracking-[-.01em] flex-col justify-center  min-h-screen  sm:p-20">
+      <Toaster />
       <h1 className="font-mono font-semibold text-8xl  md:text-9xl">Buzzly</h1>
 
       <code className="bg-black/[.05] flex items-center justify-center gap-5  mt-5 dark:bg-white/[.06] font-mono font-semibold px-2 py-0.5 rounded">
@@ -46,9 +49,19 @@ export default function Home() {
           )}
         </button>
       </code>
-      <Link className="font-mono mt-5 underline" href={"/docs"}>
-        Documentation
-      </Link>
+      <div className="flex gap-10 mt-5 items-center justify-center">
+        <button
+          onClick={() => toast.success("This is An example")}
+          className="font-mono py-1 cursor-pointer bg-[var(--foreground)] text-black px-4 rounded"
+        >
+          Render a Toast
+        </button>
+        <Link className="font-mono  underline" href={"/docs"}>
+          Documentation
+        </Link>
+      </div>
+      <Page />
+      
     </div>
   );
 }

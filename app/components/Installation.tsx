@@ -1,5 +1,4 @@
 "use client";
-import useCopyToClipBoard from "@/app/hooks/useCopyToClipboard";
 import { easeInOut, motion } from "framer-motion";
 
 export default function Page() {

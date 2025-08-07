@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <div className="  flex items-center transition-all duration-300 tracking-[-.01em] flex-col justify-center dark:bg-black bg-white    sm:p-20">
         <span
-          className="bg-red-900/20 gap-1 font-mono flex items-center justify-center mt-10    text-red-500 py-1 px-4 text-sm rounded-full"
+          className="bg-red-900/20 gap-1 font-mono flex items-center justify-center mt-10    text-red-500 py-1 px-4 text-xs rounded-full"
           style={{
             border: "1px solid #fb2c36",
           }}

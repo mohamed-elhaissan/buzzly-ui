@@ -7,7 +7,7 @@ export default function Position() {
   const [activatedButton, setActivatedButton] = useState<string>(positions[0]);
   const [isCLickedButton, setIsCLickedButton] = useState<number>(0);
   return (
-    <section className="xl:w-1/3 mb-4 sm:w-[80%]  2xl:w-1/3">
+    <section className="mb-4">
       <div>
         <motion.h1
           variants={itemVariants}

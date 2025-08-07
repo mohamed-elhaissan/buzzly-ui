@@ -1,5 +1,4 @@
 import dynamic from "next/dynamic";
-import FooterLinks from "@/app/components/FooterLinks";
 
 const Positions = dynamic(() => import("@/app/components/Positions"), {
   loading: () => <div className="h-32 animate-pulse bg-gray-100 rounded"></div>,
@@ -14,18 +13,12 @@ const Others = dynamic(() => import("@/app/components/Others"), {
 
 export default function Page() {
   return (
-    <div className="p-4 mt-10 flex flex-col gap-10">
+    <div className="p-4 mt-10 flex flex-col gap-10 w-full items-center justify-center">
       <Types />
 
       <Positions />
       <Others />
-
-      <FooterLinks
-        prevPageHref="/docs"
-        prevPageText="Introduction"
-        nextPageHref="/docs/installation"
-        nextPageText="Installation" 
-      />
     </div>
   );
 }
+https://dribbble.com/shots/24903811-Some-Code-Blocks

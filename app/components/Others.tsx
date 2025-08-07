@@ -15,13 +15,13 @@ const Others = () => {
   const [isCLickedButton, setIsCLickedButton] = useState<number>(0);
 
   return (
-    <section >
+    <section className="w-[90%] lg:w-1/2">
       <div>
         <motion.h1
           variants={itemVariants}
           initial="closed"
           animate="open"
-          className="text-2xl font-bold text-[#87CEEB]"
+          className="text-2xl font-bold "
         >
           Others
         </motion.h1>
@@ -29,12 +29,15 @@ const Others = () => {
           variants={itemVariants}
           initial="closed"
           animate="open"
-          className="text-gray-500"
+          className="dark:text-[#c1c1c6] font-mono"
+          style={{
+            wordSpacing : '-0.1rem'
+          }}
         >
           You can use more options to customize the toast.
         </motion.p>
 
-        <motion.div className="mt-4   flex items-center gap-3  flex-wrap w-full">
+        <motion.div className="mt-4   flex items-center gap-3 font-mono  flex-wrap w-full">
           {allTypes.map((item, index) => (
             <motion.div
               variants={itemVariants}
@@ -71,11 +74,11 @@ const Others = () => {
                   animate="open"
                   className="codeBlock text-sm"
                 >
-                  <span className="text-[#77dddd]">toast</span>
-                  <span className="text-[#F07178]">
+                  <span className="dark:text-[#4c9beb]">toast</span>
+                  <span className="dark:text-[#bf7af0]">
                     .{isActivatedButton.tag}
                   </span>
-                  <span className="text-[#C3E88D]">
+                  <span className="dark:text-[#5eb76e]">
                     {isActivatedButton.snippet}
                   </span>
                   <pre>

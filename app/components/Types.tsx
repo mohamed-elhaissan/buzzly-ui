@@ -16,13 +16,13 @@ const Types = () => {
   const [isCLickedButton, setIsCLickedButton] = useState<number>(0);
 
   return (
-    <section className="mb-4  ">
+    <section className="mb-4 w-[90%] lg:w-1/2">
       <div>
         <motion.h1
           variants={itemVariants}
           initial="closed"
           animate="open"
-          className="text-2xl font-bold text-[#87CEEB]"
+          className="text-2xl font-bold  font-mono"
         >
           Types
         </motion.h1>
@@ -30,7 +30,10 @@ const Types = () => {
           variants={itemVariants}
           initial="closed"
           animate="open"
-          className="text-gray-500"
+          className="dark:text-[#c1c1c6] font-mono "
+          style={{
+            wordSpacing: "-0.1rem",
+          }}
         >
           Types are used to define the type of the data that is being passed to
           the component.
@@ -53,7 +56,7 @@ const Types = () => {
                   background: isCLickedButton === index ? "#ffffff" : "#1D1D1D",
                   color: isCLickedButton === index ? "black" : "#fff",
                 }}
-                className="codeText text-sm    text-white  hover:opacity-50 transition duration-75 ease-in p-2 px-4 rounded cursor-pointer  "
+                className="codeText text-sm font-mono    text-white  hover:opacity-50 transition duration-75 ease-in p-2 px-4 rounded cursor-pointer  "
               >
                 {type.name}
               </button>
@@ -64,7 +67,7 @@ const Types = () => {
               variants={itemVariants}
               initial="closed"
               animate="open"
-              className=" mt-5 w-full border bg-[#111111] border-[#2e2e2d] text-white flex justify-between items-center py-4 px-5 rounded"
+              className=" mt-5 w-full font-mono border bg-[#111111] border-[#2e2e2d] text-white flex justify-between items-center py-4 px-5 rounded"
             >
               {isActivatedButton.snippet ? (
                 <motion.p
@@ -73,11 +76,11 @@ const Types = () => {
                   animate="open"
                   className="codeBlock text-sm"
                 >
-                  <span className="text-[#77dddd]">toast</span>
-                  <span className="text-[#F07178]">
+                  <span className="dark:text-[#4c9beb]">toast</span>
+                  <span className="dark:text-[#bf7af0]">
                     .{isActivatedButton.tag}
                   </span>
-                  <span className="text-[#C3E88D]">
+                  <span className="dark:text-[#5eb76e]">
                     {isActivatedButton.snippet}
                   </span>
                 </motion.p>

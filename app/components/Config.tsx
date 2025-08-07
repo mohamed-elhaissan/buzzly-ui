@@ -21,4 +21,3 @@ export default function Page() {
     </div>
   );
 }
-https://dribbble.com/shots/24903811-Some-Code-Blocks

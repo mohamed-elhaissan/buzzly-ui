@@ -1,5 +1,6 @@
 "use client";
 import { easeInOut, motion } from "framer-motion";
+import CopyBtn from "./CopyBtn";
 
 export default function Page() {
   return (
@@ -24,6 +25,7 @@ export default function Page() {
             <span className="dark:text-[#52c3f1]">npm</span>{" "}
             <span className="dark:text-[#189b6a]">install buzzly</span>
           </code>
+          <CopyBtn text="npm i buzzly" />
         </code>
       </div>
       <div

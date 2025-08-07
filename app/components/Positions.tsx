@@ -7,13 +7,13 @@ export default function Position() {
   const [activatedButton, setActivatedButton] = useState<string>(positions[0]);
   const [isCLickedButton, setIsCLickedButton] = useState<number>(0);
   return (
-    <section className="xl:w-1/3 mb-4 sm:w-[80%]  2xl:w-1/3">
+    <section className="mb-4 w-[90%] xl:w-1/2">
       <div>
         <motion.h1
           variants={itemVariants}
           initial="closed"
           animate="open"
-          className="text-2xl font-bold text-[#87CEEB]"
+          className="text-2xl font-bold  "
         >
           Positions
         </motion.h1>
@@ -21,12 +21,15 @@ export default function Position() {
           variants={itemVariants}
           initial="closed"
           animate="open"
-          className="text-gray-500"
+          className="dark:text-[#c1c1c6] font-mono"
+          style={{
+            wordSpacing: "-0.1rem",
+          }}
         >
           Swipe direction changes depending on the position.
         </motion.p>
 
-        <div className="mt-4   flex items-center  gap-x-3 gap-y-2 flex-wrap w-full">
+        <div className="mt-4   flex items-center font-mono  gap-x-3 gap-y-2 flex-wrap w-full">
           {positions.map((position: string, index: number) => (
             <motion.div
               variants={itemVariants}
@@ -36,7 +39,7 @@ export default function Position() {
             >
               <button
                 style={{
-                  background: isCLickedButton === index ? "#8CEECA" : "#1D1D1D",
+                  background: isCLickedButton === index ? "white" : "#1D1D1D",
                   color: isCLickedButton === index ? "black" : "#fff",
                 }}
                 onClick={() => {
@@ -64,10 +67,10 @@ export default function Position() {
                   className="codeBlock text-white text-sm"
                 >
                   {"<"}
-                  <span className="text-[#ffcc66]">Toaster </span>
-                  <span className="text-[#77dddd]">position=</span>
+                  <span className="dark:text-[#5ab170]">Toaster </span>
+                  <span className="dark:text-[#9166c8]">position=</span>
                   {`{"`}
-                  <span className="text-[#C3E88D]">{activatedButton}</span>
+                  <span className="dark:text-[#448c69]">{activatedButton}</span>
                   {`"} />`}
                 </motion.p>
               ) : (

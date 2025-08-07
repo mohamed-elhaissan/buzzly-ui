@@ -4,6 +4,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --borderColor: #1f1f1f;
+  --codeBlock: "171717";
 }
 
 @theme inline {
@@ -11,12 +12,14 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-robt: var(--font-roboto);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #000000;
     --foreground: #ededed;
+    --codeBlock: "#fcfcfc";
   }
 }
 
@@ -24,6 +27,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 .svg-white {
